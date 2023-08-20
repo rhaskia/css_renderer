@@ -1,0 +1,12 @@
+# Blender 3.6.0 MTL File: 'None'
+# www.blender.org
+
+newmtl 12993_diffuse
+Ns 29.999998
+Ka 1.000000 1.000000 1.000000
+Ks 0.360000 0.360000 0.360000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd D:/Downloads/cadnav-23062Q24301/cadnav.com_model/Models_G0404A306/12993_Long-Fin_diffuse.jpg
