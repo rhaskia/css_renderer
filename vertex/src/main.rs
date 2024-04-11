@@ -6,7 +6,12 @@ const OFFSET: f32 = 0.;
 type Vector3 = Point3<f32>;
 
 fn main() {
-    let obj = fs::read("fish.obj").expect("Improper OBJ");
+    let cornell_box = tobj::load_obj("cube.obj", &tobj::GPU_LOAD_OPTIONS);
+    let (models, materials) = cornell_box.expect("Failed to load OBJ file");
+    let mesh = &models[0].mesh;
+    println!("{:?}", mesh.positions);
+
+    let obj = fs::read("cube.obj").expect("Improper OBJ");
     let chars = obj.iter().map(|x| *x as char).collect::<String>();
     let lines = chars.lines().collect::<Vec<&str>>();
 
@@ -24,7 +29,7 @@ fn main() {
             vertices.push(p);
         }
 
-        else if parts[0] == "fr" && parts.len() == 5 {
+        else if parts[0] == "f" && parts.len() == 5 {
             let f = read_face_value(parts, &vertices);
             html.push_str(&*format_face(f));
         }
@@ -58,7 +63,7 @@ fn read_face_value(parts: Vec<&str>, points: &Vec<Vector3>) -> Matrix4<f32> {
 }
 
 fn get_v_ref(s: &str) -> usize {
-    s.chars().nth(0).unwrap() as usize
+    s.parse().expect(&format!("{s} not valid number"))
 }
 
 fn read_point_value(parts: Vec<&str>) -> Point3<f32> {
