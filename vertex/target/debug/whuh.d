@@ -1,1 +1,1 @@
-D:\rust\css_renderer\vertex\target\debug\whuh.exe: D:\rust\css_renderer\vertex\src\main.rs
+/mnt/sdcard/projects/css_renderer/vertex/target/debug/whuh: /mnt/sdcard/projects/css_renderer/vertex/src/main.rs

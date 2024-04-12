@@ -20,9 +20,9 @@
 .face {
     position: absolute;
     display: block;
+    background-color: deepskyblue;
     width: 10px;
     height: 10px;
-    background-color: deepskyblue;
 }
 
 .sphere {

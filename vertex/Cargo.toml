@@ -7,5 +7,7 @@ edition = "2021"
 
 [dependencies]
 anyhow = "1.0.82"
+itertools = "0.12.1"
 nalgebra = "0.32.3"
 tobj = "4.0.2"
+wavefront_obj = "10.0.0"
